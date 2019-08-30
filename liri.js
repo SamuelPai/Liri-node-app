@@ -10,6 +10,7 @@ var spotify = new Spotify(keys.spotify);
 var input = process.argv[2];
 var input2 = process.argv.slice(3).join(", ");
 
+function a(input, input2) {
 
 if (input === "concert-this") {
   var artist = input2;
@@ -103,17 +104,6 @@ if (input === "concert-this") {
             var movieData = response.data;
 
             
-            
-            
-            // console.log("------------------------------------------------------");
-            // console.log("Movie Name: " + movieData.Title);
-            // console.log("Release Year: " + movieData.Year);
-            // console.log("IMDB Rating: " + movieData.imdbRating);
-            // console.log("Country of Production: " + movieData.Country);
-            // console.log("Language: " + movieData.Language);
-            // console.log("Plot: " + movieData.Plot);
-            // console.log("Actors: " + movieData.Actors);
-            // console.log("Rotten Tomatoes Rating: " + movieData.Ratings[1].Value);
             if (movieData.Ratings.length<2) {
               console.log("------------------------------------------------------");
             console.log("Movie Name: " + movieData.Title);
@@ -145,5 +135,22 @@ if (input === "concert-this") {
   
 
 } else if (input === "do-what-it-says") {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+
+    // If the code experiences any errors it will log the error to the console.
+    if (error) {
+      return console.log(error);
+    }
   
+   var randomTxt = data.split(",");
+   var word1 = randomTxt[0];
+   var word2 = randomTxt[1];
+   a(word1, word2);
+  
+  });
+  
+  }
+
 }
+
+a(input, input2);
