@@ -54,7 +54,33 @@ if (input === "concert-this") {
   });
 }
  else if (input === "spotify-this-song") {
+  
   var song = input2;
+  if(song === "") {
+    var song2 = "The Sign";
+
+    spotify
+  .search({ type: 'track', query: song2 })
+  .then(function(response) {
+    // console.log(response.tracks.items[3].album.artists);
+    var artists = response.tracks.items[3].album.artists;
+  
+    
+    var song = response.tracks.items[3].name;
+    var preview = response.tracks.items[3].preview_url;
+    var album = response.tracks.items[3].album.name;
+    for (var i = 0; i < artists.length; i++) {
+      console.log("Artist(s): " + artists[i].name);
+    }
+    console.log("Song: " + song);
+    console.log("Preview Link: " + preview);
+    console.log("Album: " + album);
+  })
+  .catch(function(err) {
+    console.log(err);
+  }); 
+
+  } else {
   spotify
   .search({ type: 'track', query: input2 })
   .then(function(response) {
@@ -73,7 +99,9 @@ if (input === "concert-this") {
   })
   .catch(function(err) {
     console.log(err);
-  });
+  }); 
+}
+    
 } else if (input === "movie-this") {
   var movie = input2;
   var movie2 = "Mr. Nobody";
