@@ -18,4 +18,4 @@ Technologies Used: Javascript, Node.js, NPM, Spotify API, OMDB API, Bands in Tow
 Created by: Sam Pai
 If you have questions or want further information, please email me at SamuelPai16@gmail.com
 
-![alt text](relative/path/to/concert-this.gif)
+![concert-this](concert-this.gif)
