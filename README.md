@@ -17,3 +17,5 @@ In order for the first 3 components to work, you must remember to input (node li
 Technologies Used: Javascript, Node.js, NPM, Spotify API, OMDB API, Bands in Town API
 Created by: Sam Pai
 If you have questions or want further information, please email me at SamuelPai16@gmail.com
+
+concert-this.gif
