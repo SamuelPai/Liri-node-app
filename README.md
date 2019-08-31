@@ -19,3 +19,8 @@ Created by: Sam Pai
 If you have questions or want further information, please email me at SamuelPai16@gmail.com
 
 ![concert-this](concert-this.gif)
+![spotify-this-song](spotify-this-song.gif)
+![movie-this](movie-this.gif)
+![do-what-it-says](do-what-it-says.gif)
+
+
