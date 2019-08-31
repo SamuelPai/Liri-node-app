@@ -57,6 +57,8 @@ if (input === "concert-this") {
   
   var song = input2;
   if(song === "") {
+    console.log("------------------------------------------------------");
+
     var song2 = "The Sign";
 
     spotify
@@ -69,12 +71,15 @@ if (input === "concert-this") {
     var song = response.tracks.items[3].name;
     var preview = response.tracks.items[3].preview_url;
     var album = response.tracks.items[3].album.name;
+    console.log("------------------------------------------------------");
     for (var i = 0; i < artists.length; i++) {
       console.log("Artist(s): " + artists[i].name);
-    }
+    };
     console.log("Song: " + song);
     console.log("Preview Link: " + preview);
     console.log("Album: " + album);
+    console.log("------------------------------------------------------");
+
   })
   .catch(function(err) {
     console.log(err);
@@ -141,7 +146,7 @@ if (input === "concert-this") {
             console.log("Language: " + movieData.Language);
             console.log("Plot: " + movieData.Plot);
             console.log("Actors: " + movieData.Actors);
-              console.log("Rotten Tomatoes Rating: none");
+              console.log("Rotten Tomatoes Rating: none" + "\n------------------------------------------------------");
               console.log("------------------------------------------------------");
 
           } else {
